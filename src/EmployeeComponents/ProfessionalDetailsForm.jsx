@@ -17,7 +17,7 @@ const ProfessionalDetailsForm = ({
       const token = localStorage.getItem("token");
       try {
         const response = await fetch(
-          "https://msquirebackend.azurewebsites.net/api/v1/employeeManager/AdminsAndManagers",
+          "https://ssitcloudbackend.azurewebsites.net/api/v1/employeeManager/AdminsAndManagers",
           {
             method: "GET",
             headers: {
@@ -94,10 +94,10 @@ const ProfessionalDetailsForm = ({
       newErrors.employmentStatus = "Please enter the employment status";
     }
 
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@middlewaretalents\.com$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@ssits\.com$/;
     if (!emailPattern.test(formData.corporateEmail)) {
       newErrors.corporateEmail =
-        "Please enter a valid email address with @middlewaretalents.com domain.";
+        "Please enter a valid email address with @ssits.com domain.";
     }
     return newErrors;
   };
@@ -146,7 +146,7 @@ const ProfessionalDetailsForm = ({
       try {
         // Send the request to check if Employee ID exists
         const response = await fetch(
-          `https://msquirebackend.azurewebsites.net/api/v1/employeeManager/exists/${formData.employeeId}`,
+          `https://ssitcloudbackend.azurewebsites.net/api/v1/employeeManager/exists/${formData.employeeId}`,
           {
             method: "GET",
             headers: {

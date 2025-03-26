@@ -28,7 +28,7 @@ const Register = () => {
     const validateInput = () => {
         let isValid = true;
         const namePattern = /^[a-zA-Z\s]*$/;
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@middlewaretalents\.com$/; // Restrict to middlewaretalents.com
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@ssits\.com$/; // Restrict to middlewaretalents.com
 
         if (!employee_name) {
             setEmployeeNameError("* Please fill in the employee name.");
@@ -95,7 +95,7 @@ const Register = () => {
 
         try {
             console.log("Sending registration request to API"); // Debug message
-            const response = await axios.post("https://msquirebackend.azurewebsites.net/api/v1/employeeManager/register", formData, {
+            const response = await axios.post("https://ssitcloudbackend.azurewebsites.net/api/v1/employeeManager/register", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
