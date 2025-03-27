@@ -52,6 +52,7 @@ const DocumentUploadForm = ({ formData, onNext, onBack, onCancel, onFormDataChan
         // Add checks for other required documents if necessary
 
         if (formHasError) {
+            handleLoading();
             return;
         }
 
